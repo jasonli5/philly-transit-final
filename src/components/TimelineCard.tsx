@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
+import Image from "next/image";
 
 const Style = styled.div`
   .timeline-card {
@@ -23,7 +24,7 @@ const Style = styled.div`
     transform: scale(1.02);
   }
 
-  .timeline-card-image img {
+  .timeline-card-image .image {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -47,7 +48,13 @@ export const TimelineCard: React.FC<TimelineCardProps> = ({
     <Style>
       <Link href={link} className="timeline-card">
         <div className="timeline-card-image">
-          <img src={image} />
+          <Image
+            className="image"
+            src={image}
+            alt={title}
+            width={300}
+            height={100}
+          />
         </div>
         <h2>{title}</h2>
       </Link>

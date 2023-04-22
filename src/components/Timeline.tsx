@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import Image from "next/image";
 
 const Style = styled.div`
   .timeline-section {
@@ -75,7 +76,7 @@ const Style = styled.div`
     height: 100%;
   }
 
-  .content-image img {
+  .content-image .image {
     display: block;
     max-width: 350px;
     max-height: 300px;
@@ -184,7 +185,13 @@ export const Timeline: React.FC<TimelineProps> = ({
                       <p>{item.description}</p>
                     </div>
                     <div className="content-image">
-                      <img src={item.image.src} alt={item.image.alt} />
+                      <Image
+                        className="image"
+                        src={item.image.src}
+                        alt={item.image.alt}
+                        width={350}
+                        height={300}
+                      />
                     </div>
                   </div>
                 );

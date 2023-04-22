@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import SubwayIcon from "@mui/icons-material/Subway";
 import MenuIcon from "@mui/icons-material/Menu";
 import React from "react";
+import Link from "next/link";
 
 const Style = styled.div`
   header {
@@ -18,11 +19,6 @@ const Style = styled.div`
     top: 2rem;
     border-radius: 10rem;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  header img {
-    width: 2rem;
-    height: 2rem;
   }
 
   header > a {
@@ -121,10 +117,10 @@ export const Header: React.FC<HeaderProps> = ({ fixed }) => {
         className={open ? "active-menu" : ""}
         style={{ position: !fixed ? "fixed" : "relative" }}
       >
-        <a href="/" className="logo">
+        <Link href="/" className="logo">
           <SubwayIcon style={{ fontSize: "48px", color: "#3262ff" }} />
           <span>philly transit</span>
-        </a>
+        </Link>
         <nav>
           <a href="#" className="menu-button" onClick={toggleMenu}>
             <MenuIcon style={{ fontSize: "48px", color: "#000000" }} />

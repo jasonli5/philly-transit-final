@@ -1,6 +1,7 @@
 import NavigationButton from "@/components/NavigationButton";
 import styled from "@emotion/styled";
 import Link from "next/link";
+import Image from "next/image";
 
 const Style = styled.div`
   .map-home-section {
@@ -27,14 +28,22 @@ const Style = styled.div`
     margin-top: 1rem;
   }
 
-  #google_map-section {
-    margin: 0 auto;
-    max-width: 100%;
-    max-height: 30rem;
+  .image-container {
     border-radius: 1rem;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    object-fit: contain;
     margin-bottom: 1rem;
+    overflow: hidden;
+    width: 75%;
+    max-width: 55rem;
+    height: 20rem;
+    max-height: 30rem;
+    position: relative;
+    display: flex;
+  }
+
+  .image {
+    object-fit: cover;
+    object-position: center;
   }
 `;
 
@@ -47,7 +56,14 @@ export const MapSection = () => {
             Map
           </h1>
 
-          <img id="google_map-section" src="/images/map.png" />
+          <div className="image-container">
+            <Image
+              className="image"
+              src="/images/map.png"
+              alt="google maps"
+              fill
+            />
+          </div>
           <NavigationButton href="/map">Explore the map!</NavigationButton>
         </div>
       </section>
