@@ -20,7 +20,7 @@ const Style = styled.div`
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url(http://localhost:3000/30th.jpg);
+    background-image: url(${process.env.NEXT_PUBLIC_URL}/30th.jpg);
     background-size: cover;
     background-position: center 60%;
     background-repeat: no-repeat;
@@ -66,7 +66,7 @@ export const Landing = () => {
           <div className="headline-container">
             <p className="title">Transit through time.</p>
             <p className="description">
-              Explore the history of Philadelphia&apos; SEPTA with interactive
+              Explore the history of Philadelphia&apos;s SEPTA with interactive
               maps, timelines, videos, and more!
             </p>
             <NavigationButton href="#timeline">Explore</NavigationButton>

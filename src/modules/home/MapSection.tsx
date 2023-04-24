@@ -34,7 +34,7 @@ const Style = styled.div`
     margin-bottom: 1rem;
     overflow: hidden;
     width: 75%;
-    max-width: 55rem;
+    max-width: 100%;
     height: 20rem;
     max-height: 30rem;
     position: relative;
