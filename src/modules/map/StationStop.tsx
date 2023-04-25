@@ -19,7 +19,7 @@ export const StationStop: React.FC<StationStopProps> = ({
 
   // Set icon size to 16px on hover
   const handleMouseOver = () => {
-    setIconSize(16);
+    setIconSize(20);
   };
 
   const handleMouseOut = () => {

@@ -1,401 +1,416 @@
 {
-    "BSL": {
-      "name": "Broad Street Line",
-      "color": "#00A1DE",
-      "description": "",
-      "mode": "subway",
-      "dailyRidership": 120000,
-      "stops": [
-        {
-          "name": "Fern Rock Transportation Center",
-          "position": [40.04182945431144, -75.1368497075527]
-        },
-        {
-          "name": "Olney Transportation Center",
-          "position": [40.03907949659955, -75.1446934913967]
-        },
-        {
-          "name": "Logan Station",
-          "position": [40.030387254237006, -75.14626117873726]
-        },
-        {
-          "name": "Wyoming Station",
-          "position": [40.02455837837375, -75.14790256495647]
-        },
-        {
-          "name": "Hunting Park Station",
-          "position": [40.016933727995735, -75.14950337113358]
-        },
-        {
-          "name": "Erie Station",
-          "position": [40.00923027292238, -75.15119852647538]
-        },
-        {
-          "name": "Allegheny Station",
-          "position": [40.001505409881744, -75.15313111249904]
-        },
-        {
-          "name": "North Philadelphia Station",
-          "position": [39.99435271377966, -75.154307204745]
-        },
-        {
-          "name": "Susquehanna-Dauphin Station",
-          "position": [39.98702276438566, -75.15602755913976]
-        },
-        {
-          "name": "Cecil B. Moore Station",
-          "position": [39.9787016916122, -75.15785535570367]
-        },
-        {
-          "name": "Girard Station",
-          "position": [39.971511634909255, -75.15939282880184]
-        },
-        {
-          "name": "Fairmount Station",
-          "position": [39.96666222576834, -75.16065566158595]
-        },
-        {
-          "name": "Spring Garden Station",
-          "position": [39.96238028530961, -75.16171389652638]
-        },
-        {
-          "name": "Race Vine Station",
-          "position": [39.95752783800313, -75.16234246130396]
-        },
-        {
-          "name": "City Hall Station",
-          "position": [39.95246380576187, -75.1640625694813]
-        },
-        {
-          "name": "Walnut-Locust Station",
-          "position": [39.949372112125644, -75.16445971594635]
-        },
-        {
-          "name": "Lombard-South Station",
-          "position": [39.94378488915983, -75.16548229961568]
-        },
-        {
-          "name": "Ellsworth-Federal Station",
-          "position": [39.936188645983826, -75.1671305838643]
-        },
-        {
-          "name": "Tasker Morris Station",
-          "position": [39.92980430624261, -75.1685179160225]
-        },
-        {
-          "name": "Snyder Station",
-          "position": [39.92435902719476, -75.16970968693968]
-        },
-        {
-          "name": "Oregon Station",
-          "position": [39.916815824589314, -75.17112798091331]
-        },
-        {
-          "name": "NRG Station",
-          "position": [39.90543305096446, -75.17391312247966]
-        }
-      ]
-    },
-    "MFL": {
-      "name": "Market-Frankford Line",
-      "color": "#FFD700",
-      "description": "",
-      "mode": "subway",
-      "dailyRidership": 170000,
-      "stops": [
-        {
-          "name": "69th Street Transportation Center",
-          "position": [39.962024, -75.2595182]
-        },
-        { "name": "Millbourne Station", "position": [39.9643947, -75.2524045] },
-        {
-          "name": "63rd Street Station",
-          "position": [39.9624901, -75.2465335]
-        },
-        {
-          "name": "60th Street Station",
-          "position": [39.9620353, -75.2407516]
-        },
-        {
-          "name": "56th Street Station",
-          "position": [39.9608288, -75.2331221]
-        },
-        { "name": "52nd Street Station", "position": [39.959976, -75.224892] },
-        { "name": "46th Street Station", "position": [39.958618, -75.214027] },
-        {
-          "name": "40th Street Station",
-          "position": [39.9570452, -75.2017793]
-        },
-        {
-          "name": "34th Street Station",
-          "position": [39.9558604, -75.19147269999999]
-        },
-        {
-          "name": "30th Street Station",
-          "position": [39.9550517, -75.1834945]
-        },
-        { "name": "15th Street Station", "position": [39.952503, -75.165367] },
-        { "name": "13th Street Station", "position": [39.952137, -75.161453] },
-        {
-          "name": "11th Street Station",
-          "position": [39.9516844, -75.1580438]
-        },
-        { "name": "8th Street Station", "position": [39.9511883, -75.1533089] },
-        {
-          "name": "5th Street/Independence Hall Station",
-          "position": [39.9505596, -75.14893359999999]
-        },
-        {
-          "name": "2nd Street Station",
-          "position": [39.949909400462104, -75.14376670014494]
-        },
-        {
-          "name": "Spring Garden Station",
-          "position": [39.9605083, -75.1404125]
-        },
-        {
-          "name": "Girard Station",
-          "position": [39.9692414, -75.13618029999999]
-        },
-        {
-          "name": "Berks Station",
-          "position": [39.978623107624074, -75.13344571465626]
-        },
-        {
-          "name": "York-Dauphin Station",
-          "position": [39.985162, -75.1321778]
-        },
-        {
-          "name": "Huntingdon Station",
-          "position": [39.98880503103831, -75.12727519059067]
-        },
-        {
-          "name": "Somerset Station",
-          "position": [39.9914837, -75.12262179999999]
-        },
-        { "name": "Allegheny Station", "position": [39.9963725, -75.1139625] },
-        {
-          "name": "Tioga Station",
-          "position": [40.0004596, -75.10654509999999]
-        },
-        {
-          "name": "Erie-Torresdale Station",
-          "position": [40.0060429, -75.0962078]
-        },
-        {
-          "name": "Church Station",
-          "position": [40.01047510000001, -75.0889715]
-        },
-        {
-          "name": "Arrott Transportation Center",
-          "position": [40.01658518040249, -75.08376009940632]
-        },
-        {
-          "name": "Frankford Transportation Center",
-          "position": [40.023013182624226, -75.07795559255067]
-        }
-      ]
-    },
-    "AIR": {
-      "name": "Airport Line",
-      "color": "#FFD700",
-      "description": "",
-      "mode": "regional rail",
-      "dailyRidership": 4686,
-      "distance": 20.2,
-      "stations": 10,
-      "stops": []
-    },
-    "CHE": {
-      "name": "Chestnut Hill East Line",
-      "color": "#FFD700",
-      "description": "",
-      "mode": "regional rail",
-      "dailyRidership": 3874,
-      "distance": 12.2,
-      "stations": 14,
-      "stops": []
-    },
-    "CHW": {
-      "name": "Chestnut Hill West Line",
-      "color": "#FFD700",
-      "description": "",
-      "mode": "regional rail",
-      "dailyRidership": 4464,
-      "distance": 14.7,
-      "stations": 14,
-      "stops": []
-    },
-    "CYN": {
-      "name": "Cynwyd Line",
-      "color": "#FFD700",
-      "description": "",
-      "mode": "regional rail",
-      "dailyRidership": 505,
-      "distance": 6.1,
-      "stations": 7,
-      "stops": []
-    },
-    "FOX": {
-      "name": "Fox Chase Line",
-      "color": "#FFD700",
-      "description": "",
-      "mode": "regional rail",
-      "dailyRidership": 4560,
-      "distance": 12.5,
-      "stations": 10,
-      "stops": []
-    },
-    "LAN": {
-      "name": "Lansdale/Doylestown Line",
-      "color": "#FFD700",
-      "description": "",
-      "mode": "regional rail",
-      "dailyRidership": 17306,
-      "distance": 35.8,
-      "stations": 28,
-      "stops": []
-    },
-    "MED": {
-      "name": "Media/Wawa Line",
-      "color": "#FFD700",
-      "description": "",
-      "mode": "regional rail",
-      "dailyRidership": 11202,
-      "distance": 16.5,
-      "stations": 19,
-      "stops": []
-    },
-    "NOR": {
-      "name": "Manayunk/Norristown Line",
-      "color": "#FFD700",
-      "description": "",
-      "mode": "regional rail",
-      "dailyRidership": 11486,
-      "distance": 19.5,
-      "stations": 16,
-      "stops": []
-    },
-    "PAO": {
-      "name": "Paoli/Thorndale Line",
-      "color": "#FFD700",
-      "description": "",
-      "mode": "regional rail",
-      "dailyRidership": 21284,
-      "distance": 37.9,
-      "stations": 22,
-      "stops": []
-    },
-    "TRE": {
-      "name": "Trenton Line",
-      "color": "#FFD700",
-      "description": "",
-      "mode": "regional rail",
-      "dailyRidership": 11132,
-      "distance": 36.4,
-      "stations": 15,
-      "stops": []
-    },
-    "WAR": {
-      "name": "Warminster Line",
-      "color": "#FFD700",
-      "description": "",
-      "mode": "regional rail",
-      "dailyRidership": 7667,
-      "distance": 22.3,
-      "stations": 17,
-      "stops": []
-    },
-    "WIL": {
-      "name": "Wilmington/Newark Line",
-      "color": "#FFD700",
-      "description": "",
-      "mode": "regional rail",
-      "dailyRidership": 8917,
-      "distance": 41.1,
-      "stations": 22,
-      "stops": []
-    },
-    "WTR": {
-      "name": "West Trenton Line",
-      "color": "#FFD700",
-      "description": "",
-      "mode": "regional rail",
-      "dailyRidership": 12031,
-      "distance": 34.7,
-      "stations": 23,
-      "stops": []
-    },
-    "10": {
-      "name": "Trolley Route 10",
-      "color": "#FFD700",
-      "description": "",
-      "mode": "trolley",
-      "dailyRidership": 11589,
-      "stops": []
-    },
-    "11": {
-      "name": "Trolley Route 11",
-      "color": "#FFD700",
-      "description": "",
-      "mode": "trolley",
-      "dailyRidership": 13480,
-      "stops": []
-    },
-    "13": {
-      "name": "Trolley Route 13",
-      "color": "#FFD700",
-      "description": "",
-      "mode": "trolley",
-      "dailyRidership": 13364,
-      "stops": []
-    },
-    "15": {
-      "name": "Trolley Route 15",
-      "color": "#FFD700",
-      "description": "",
-      "mode": "trolley",
-      "dailyRidership": 9032,
-      "stops": []
-    },
-    "34": {
-      "name": "Trolley Route 34",
-      "color": "#FFD700",
-      "description": "",
-      "mode": "trolley",
-      "dailyRidership": 12413,
-      "stops": []
-    },
-    "36": {
-      "name": "Trolley Route 36",
-      "color": "#FFD700",
-      "description": "",
-      "mode": "trolley",
-      "dailyRidership": 12737,
-      "stops": []
-    },
-    "101": {
-      "name": "Trolley Route 101",
-      "color": "#FFD700",
-      "description": "",
-      "mode": "trolley",
-      "dailyRidership": 3844,
-      "stops": []
-    },
-    "102": {
-      "name": "Trolley Route 102",
-      "color": "#FFD700",
-      "description": "",
-      "mode": "trolley",
-      "dailyRidership": 3888,
-      "stops": []
-    },
-    "NHSL": {
-      "name": "Norristown High Speed Line",
-      "color": "#FFD700",
-      "description": "",
-      "mode": "other",
-      "dailyRidership": null,
-      "stops": []
-    }
+  "BSL": {
+    "name": "Broad Street Line",
+    "color": "#00A1DE",
+    "description": "",
+    "mode": "subway",
+    "dailyRidership": 120000,
+    "stops": [
+      {
+        "name": "Fern Rock Transportation Center",
+        "position": [40.04182945431144, -75.1368497075527]
+      },
+      {
+        "name": "Olney Transportation Center",
+        "position": [40.03907949659955, -75.1446934913967]
+      },
+      {
+        "name": "Logan Station",
+        "position": [40.030387254237006, -75.14626117873726]
+      },
+      {
+        "name": "Wyoming Station",
+        "position": [40.02455837837375, -75.14790256495647]
+      },
+      {
+        "name": "Hunting Park Station",
+        "position": [40.016933727995735, -75.14950337113358]
+      },
+      {
+        "name": "Erie Station",
+        "position": [40.00923027292238, -75.15119852647538]
+      },
+      {
+        "name": "Allegheny Station",
+        "position": [40.001505409881744, -75.15313111249904]
+      },
+      {
+        "name": "North Philadelphia Station",
+        "position": [39.99435271377966, -75.154307204745]
+      },
+      {
+        "name": "Susquehanna-Dauphin Station",
+        "position": [39.98702276438566, -75.15602755913976]
+      },
+      {
+        "name": "Cecil B. Moore Station",
+        "position": [39.9787016916122, -75.15785535570367]
+      },
+      {
+        "name": "Girard Station",
+        "position": [39.971511634909255, -75.15939282880184]
+      },
+      {
+        "name": "Fairmount Station",
+        "position": [39.96666222576834, -75.16065566158595]
+      },
+      {
+        "name": "Spring Garden Station",
+        "position": [39.96238028530961, -75.16171389652638]
+      },
+      {
+        "name": "Race Vine Station",
+        "position": [39.95752783800313, -75.16234246130396]
+      },
+      {
+        "name": "City Hall Station",
+        "position": [39.95246380576187, -75.1640625694813]
+      },
+      {
+        "name": "Walnut-Locust Station",
+        "position": [39.949372112125644, -75.16445971594635]
+      },
+      {
+        "name": "Lombard-South Station",
+        "position": [39.94378488915983, -75.16548229961568]
+      },
+      {
+        "name": "Ellsworth-Federal Station",
+        "position": [39.936188645983826, -75.1671305838643]
+      },
+      {
+        "name": "Tasker Morris Station",
+        "position": [39.92980430624261, -75.1685179160225]
+      },
+      {
+        "name": "Snyder Station",
+        "position": [39.92435902719476, -75.16970968693968]
+      },
+      {
+        "name": "Oregon Station",
+        "position": [39.916815824589314, -75.17112798091331]
+      },
+      {
+        "name": "NRG Station",
+        "position": [39.90543305096446, -75.17391312247966]
+      }
+    ]
+  },
+  "MFL": {
+    "name": "Market-Frankford Line",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "subway",
+    "dailyRidership": 170000,
+    "stops": [
+      {
+        "name": "69th Street Transportation Center",
+        "position": [39.962024, -75.2595182]
+      },
+      { "name": "Millbourne Station", "position": [39.9643947, -75.2524045] },
+      {
+        "name": "63rd Street Station",
+        "position": [39.9624901, -75.2465335]
+      },
+      {
+        "name": "60th Street Station",
+        "position": [39.9620353, -75.2407516]
+      },
+      {
+        "name": "56th Street Station",
+        "position": [39.9608288, -75.2331221]
+      },
+      { "name": "52nd Street Station", "position": [39.959976, -75.224892] },
+      { "name": "46th Street Station", "position": [39.958618, -75.214027] },
+      {
+        "name": "40th Street Station",
+        "position": [39.9570452, -75.2017793]
+      },
+      {
+        "name": "34th Street Station",
+        "position": [39.9558604, -75.19147269999999]
+      },
+      {
+        "name": "30th Street Station",
+        "position": [39.9550517, -75.1834945]
+      },
+      { "name": "15th Street Station", "position": [39.952503, -75.165367] },
+      { "name": "13th Street Station", "position": [39.952137, -75.161453] },
+      {
+        "name": "11th Street Station",
+        "position": [39.9516844, -75.1580438]
+      },
+      { "name": "8th Street Station", "position": [39.9511883, -75.1533089] },
+      {
+        "name": "5th Street/Independence Hall Station",
+        "position": [39.9505596, -75.14893359999999]
+      },
+      {
+        "name": "2nd Street Station",
+        "position": [39.949909400462104, -75.14376670014494]
+      },
+      {
+        "name": "Spring Garden Station",
+        "position": [39.9605083, -75.1404125]
+      },
+      {
+        "name": "Girard Station",
+        "position": [39.9692414, -75.13618029999999]
+      },
+      {
+        "name": "Berks Station",
+        "position": [39.978623107624074, -75.13344571465626]
+      },
+      {
+        "name": "York-Dauphin Station",
+        "position": [39.985162, -75.1321778]
+      },
+      {
+        "name": "Huntingdon Station",
+        "position": [39.98880503103831, -75.12727519059067]
+      },
+      {
+        "name": "Somerset Station",
+        "position": [39.9914837, -75.12262179999999]
+      },
+      { "name": "Allegheny Station", "position": [39.9963725, -75.1139625] },
+      {
+        "name": "Tioga Station",
+        "position": [40.0004596, -75.10654509999999]
+      },
+      {
+        "name": "Erie-Torresdale Station",
+        "position": [40.0060429, -75.0962078]
+      },
+      {
+        "name": "Church Station",
+        "position": [40.01047510000001, -75.0889715]
+      },
+      {
+        "name": "Arrott Transportation Center",
+        "position": [40.01658518040249, -75.08376009940632]
+      },
+      {
+        "name": "Frankford Transportation Center",
+        "position": [40.023013182624226, -75.07795559255067]
+      }
+    ]
+  },
+  "BR-S": {
+    "name": "Broad-Ridge Spur",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "subway",
+    "dailyRidership": null,
+    "distance": null,
+    "stations": null,
+    "stops": [
+      {
+        "name": "Chinatown Station",
+        "position": [39.955558334109455, -75.15296010400488]
+      }
+    ]
+  },
+  "AIR": {
+    "name": "Airport Line",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "regional rail",
+    "dailyRidership": 4686,
+    "distance": 20.2,
+    "stations": 10,
+    "stops": []
+  },
+  "CHE": {
+    "name": "Chestnut Hill East Line",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "regional rail",
+    "dailyRidership": 3874,
+    "distance": 12.2,
+    "stations": 14,
+    "stops": []
+  },
+  "CHW": {
+    "name": "Chestnut Hill West Line",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "regional rail",
+    "dailyRidership": 4464,
+    "distance": 14.7,
+    "stations": 14,
+    "stops": []
+  },
+  "CYN": {
+    "name": "Cynwyd Line",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "regional rail",
+    "dailyRidership": 505,
+    "distance": 6.1,
+    "stations": 7,
+    "stops": []
+  },
+  "FOX": {
+    "name": "Fox Chase Line",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "regional rail",
+    "dailyRidership": 4560,
+    "distance": 12.5,
+    "stations": 10,
+    "stops": []
+  },
+  "LAN": {
+    "name": "Lansdale/Doylestown Line",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "regional rail",
+    "dailyRidership": 17306,
+    "distance": 35.8,
+    "stations": 28,
+    "stops": []
+  },
+  "MED": {
+    "name": "Media/Wawa Line",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "regional rail",
+    "dailyRidership": 11202,
+    "distance": 16.5,
+    "stations": 19,
+    "stops": []
+  },
+  "NOR": {
+    "name": "Manayunk/Norristown Line",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "regional rail",
+    "dailyRidership": 11486,
+    "distance": 19.5,
+    "stations": 16,
+    "stops": []
+  },
+  "PAO": {
+    "name": "Paoli/Thorndale Line",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "regional rail",
+    "dailyRidership": 21284,
+    "distance": 37.9,
+    "stations": 22,
+    "stops": []
+  },
+  "TRE": {
+    "name": "Trenton Line",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "regional rail",
+    "dailyRidership": 11132,
+    "distance": 36.4,
+    "stations": 15,
+    "stops": []
+  },
+  "WAR": {
+    "name": "Warminster Line",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "regional rail",
+    "dailyRidership": 7667,
+    "distance": 22.3,
+    "stations": 17,
+    "stops": []
+  },
+  "WIL": {
+    "name": "Wilmington/Newark Line",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "regional rail",
+    "dailyRidership": 8917,
+    "distance": 41.1,
+    "stations": 22,
+    "stops": []
+  },
+  "WTR": {
+    "name": "West Trenton Line",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "regional rail",
+    "dailyRidership": 12031,
+    "distance": 34.7,
+    "stations": 23,
+    "stops": []
+  },
+  "10": {
+    "name": "Trolley Route 10",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "trolley",
+    "dailyRidership": 11589,
+    "stops": []
+  },
+  "11": {
+    "name": "Trolley Route 11",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "trolley",
+    "dailyRidership": 13480,
+    "stops": []
+  },
+  "13": {
+    "name": "Trolley Route 13",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "trolley",
+    "dailyRidership": 13364,
+    "stops": []
+  },
+  "15": {
+    "name": "Trolley Route 15",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "trolley",
+    "dailyRidership": 9032,
+    "stops": []
+  },
+  "34": {
+    "name": "Trolley Route 34",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "trolley",
+    "dailyRidership": 12413,
+    "stops": []
+  },
+  "36": {
+    "name": "Trolley Route 36",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "trolley",
+    "dailyRidership": 12737,
+    "stops": []
+  },
+  "101": {
+    "name": "Trolley Route 101",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "trolley",
+    "dailyRidership": 3844,
+    "stops": []
+  },
+  "102": {
+    "name": "Trolley Route 102",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "trolley",
+    "dailyRidership": 3888,
+    "stops": []
+  },
+  "NHSL": {
+    "name": "Norristown High Speed Line",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "other",
+    "dailyRidership": null,
+    "stops": []
   }
+}

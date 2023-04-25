@@ -121,7 +121,7 @@ export const mapOptions = {
 };
 
 const transitModeOptions: TransitModeOptionsType = {
-  Subway: ["BSL", "MFL"],
+  Subway: ["BSL", "MFL", "BR-S"],
   Regional: [
     "AIR",
     "CHE",
@@ -143,8 +143,13 @@ const transitModeOptions: TransitModeOptionsType = {
 };
 
 function Map() {
-  const [mode, setMode] =
-    React.useState<keyof typeof transitModeOptions>("Subway");
+  const [mode, setMode] = React.useState<
+    keyof typeof transitModeOptions | "Google Transit"
+  >("Subway");
+
+  if (mode === "Google Transit") {
+    return <div>Ball</div>;
+  }
 
   const [selectedRoute, setSelectedRoute] = React.useState<
     keyof TransitInfoJSON
@@ -187,6 +192,9 @@ function Map() {
       map.setZoom(16);
     }
   }
+
+  const selectionOptions = Object.keys(transitModeOptions);
+  selectionOptions.push("Google Transit");
 
   return (
     <Style>
@@ -235,7 +243,7 @@ function Map() {
           <div className="options-container">
             <SelectOption
               label="Filter by mode"
-              options={Object.keys(transitModeOptions)}
+              options={selectionOptions}
               onModeChange={onModeChange}
             />
           </div>

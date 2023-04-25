@@ -7,6 +7,7 @@ import styled from "@emotion/styled";
 // Import Transit GeoJSON
 import BSL_GEOJSON from "@/assets/routes/BSL.json";
 import MFL_GEOJSON from "@/assets/routes/MFL.json";
+import BR_S_GEOJSON from "@/assets/routes/BR-S.json";
 import AIR_GEOJSON from "@/assets/routes/AIR.json";
 import CHE_GEOJSON from "@/assets/routes/CHE.json";
 import CHW_GEOJSON from "@/assets/routes/CHW.json";
@@ -33,6 +34,7 @@ import NHSL_GEOJSON from "@/assets/routes/NHSL.json";
 const GEOJSON_ROUTES = {
   BSL: BSL_GEOJSON,
   MFL: MFL_GEOJSON,
+  "BR-S": BR_S_GEOJSON,
   AIR: AIR_GEOJSON,
   CHE: CHE_GEOJSON,
   CHW: CHW_GEOJSON,
