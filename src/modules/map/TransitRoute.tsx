@@ -28,6 +28,7 @@ import _34_GEOJSON from "@/assets/routes/34.json";
 import _36_GEOJSON from "@/assets/routes/36.json";
 import _101_GEOJSON from "@/assets/routes/101.json";
 import _102_GEOJSON from "@/assets/routes/102.json";
+import NHSL_GEOJSON from "@/assets/routes/NHSL.json";
 
 const GEOJSON_ROUTES = {
   BSL: BSL_GEOJSON,
@@ -53,6 +54,7 @@ const GEOJSON_ROUTES = {
   "36": _36_GEOJSON,
   "101": _101_GEOJSON,
   "102": _102_GEOJSON,
+  NHSL: NHSL_GEOJSON,
 };
 
 interface TransitRouteProps {

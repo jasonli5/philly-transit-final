@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { GoogleMap, useLoadScript } from "@react-google-maps/api";
+import Image from "next/image";
 import { TransitInfoJSON, TransitModeOptionsType } from "@/types";
 import TransitRoute from "@/modules/map/TransitRoute";
+import StationStop from "@/modules/map/StationStop";
 import SelectOption from "@/components/Select";
-import StationStop from "@/components/StationStop";
 import transitInfo from "@/assets/TransitInfo.json";
 import styled from "@emotion/styled";
 
@@ -61,7 +62,7 @@ const Style = styled.div`
     width: 150px;
   }
 
-  .station-title-container {
+  .station-description-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -138,6 +139,7 @@ const transitModeOptions: TransitModeOptionsType = {
   ],
   Trolley: ["10", "11", "13", "15", "34", "36", "101", "102"],
   Bus: [],
+  Other: ["NHSL"],
 };
 
 function Map() {
@@ -185,8 +187,6 @@ function Map() {
       map.setZoom(16);
     }
   }
-
-  console.log(transitModeOptions[mode]);
 
   return (
     <Style>
@@ -239,8 +239,14 @@ function Map() {
               onModeChange={onModeChange}
             />
           </div>
-          <div className="station-title-container">
+          <div className="station-description-container">
             <h2>{selectedStation}</h2>
+            <Image
+              alt={selectedStation}
+              width={150}
+              height={150}
+              src={`/images/${selectedStation}-station`}
+            />
           </div>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import { Marker } from "@react-google-maps/api";
-import stopIcon from "../assets/stop.png";
 import React from "react";
 
 interface StationStopProps {
@@ -31,7 +30,7 @@ export const StationStop: React.FC<StationStopProps> = ({
     <Marker
       position={new google.maps.LatLng(stopPosition[0], stopPosition[1])}
       icon={{
-        url: "",
+        url: "/images/stop-icon.png",
         scaledSize: new google.maps.Size(iconSize, iconSize),
         anchor: new google.maps.Point(iconSize / 2, iconSize / 2),
       }}

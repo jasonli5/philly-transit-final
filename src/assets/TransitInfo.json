@@ -389,5 +389,13 @@
       "mode": "trolley",
       "dailyRidership": 3888,
       "stops": []
+    },
+    "NHSL": {
+      "name": "Norristown High Speed Line",
+      "color": "#FFD700",
+      "description": "",
+      "mode": "other",
+      "dailyRidership": null,
+      "stops": []
     }
   }

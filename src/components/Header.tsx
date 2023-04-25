@@ -127,14 +127,14 @@ export const Header: React.FC<HeaderProps> = ({ fixed }) => {
           </a>
           <ul className="nav_links">
             <li>
-              <a href="#timeline" onClick={toggleMenu}>
+              <Link href="/#timeline" onClick={toggleMenu}>
                 Timelines
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#map-section" onClick={toggleMenu}>
+              <Link href="/map" onClick={toggleMenu}>
                 Map
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
