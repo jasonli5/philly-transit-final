@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "@/components/Header";
-import Timeline from "@/components/Timeline";
+import Timeline from "@/modules/timeline/Timeline";
 import Meta from "@/components/Meta";
 
 const content = [

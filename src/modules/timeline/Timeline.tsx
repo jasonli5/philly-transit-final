@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import Image from "next/image";
+import { useEffect } from "react";
 
 const Style = styled.div`
   .timeline-section {
@@ -154,10 +155,16 @@ export const Timeline: React.FC<TimelineProps> = ({
   content,
   lineColor,
 }) => {
+  useEffect(() => {
+    const height = document.getElementById("container-height")?.offsetHeight;
+    console.log(height);
+    document.getElementById("line-height")!.style.height = `${height! - 300}px`;
+  }, []);
+
   return (
     <Style>
       <section className="timeline-section">
-        <div className="timeline-container">
+        <div className="timeline-container" id="container-height">
           <div className="timeline-heading">
             <h1 className="timeline-title">{title}</h1>
             <p className="timeline-description">{description}</p>
@@ -166,6 +173,7 @@ export const Timeline: React.FC<TimelineProps> = ({
           <div className="timeline-content">
             <div
               className="line"
+              id="line-height"
               style={{
                 borderColor: lineColor,
               }}

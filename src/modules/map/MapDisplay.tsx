@@ -143,13 +143,8 @@ const transitModeOptions: TransitModeOptionsType = {
 };
 
 function Map() {
-  const [mode, setMode] = React.useState<
-    keyof typeof transitModeOptions | "Google Transit"
-  >("Subway");
-
-  if (mode === "Google Transit") {
-    return <div>Ball</div>;
-  }
+  const [mode, setMode] =
+    React.useState<keyof typeof transitModeOptions>("Subway");
 
   const [selectedRoute, setSelectedRoute] = React.useState<
     keyof TransitInfoJSON
@@ -194,7 +189,6 @@ function Map() {
   }
 
   const selectionOptions = Object.keys(transitModeOptions);
-  selectionOptions.push("Google Transit");
 
   return (
     <Style>
