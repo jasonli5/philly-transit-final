@@ -1,5 +1,10 @@
 import React, { useEffect } from "react";
-import { GoogleMap, useLoadScript } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  Marker,
+  MarkerClusterer,
+  useLoadScript,
+} from "@react-google-maps/api";
 import Image from "next/image";
 import { TransitInfoJSON, TransitModeOptionsType } from "@/types";
 import TransitRoute from "@/modules/map/TransitRoute";
@@ -7,6 +12,8 @@ import StationStop from "@/modules/map/StationStop";
 import SelectOption from "@/components/Select";
 import transitInfo from "@/assets/TransitInfo.json";
 import styled from "@emotion/styled";
+import { Checkbox } from "@mui/joy";
+import TestData from "@/assets/test.json";
 
 const Style = styled.div`
   .map-container {
@@ -56,6 +63,7 @@ const Style = styled.div`
     justify-content: center;
     align-items: center;
     margin: 1rem 0;
+    gap: 1rem;
   }
 
   .mode-select {
@@ -146,6 +154,13 @@ function Map() {
   const [mode, setMode] =
     React.useState<keyof typeof transitModeOptions>("Subway");
 
+  const [showRealTimeBus, setShowRealTimeBus] = React.useState<boolean>(false);
+
+  type RealTimeBusDataType = { lat: number; lng: number; id: string }[];
+
+  const [realTimeBusData, setRealTimeBusData] =
+    React.useState<RealTimeBusDataType>([]);
+
   const [selectedRoute, setSelectedRoute] = React.useState<
     keyof TransitInfoJSON
   >(transitModeOptions[mode][0]);
@@ -159,6 +174,34 @@ function Map() {
     setSelectedRoute(transitModeOptions[mode][0]);
     setSelectedStation("");
   }, [mode]);
+
+  async function onShowRealTimeBusChange() {
+    setShowRealTimeBus(!showRealTimeBus);
+
+    const response = await fetch("/api/hello");
+    const data = await response.json();
+
+    if (!data) return;
+
+    const routes = data.routes[0];
+    const keys = Object.keys(routes) as Array<keyof typeof routes>;
+
+    const allPositions: any = [];
+
+    keys.forEach((key) => {
+      try {
+        // @ts-ignore
+        routes[key].forEach((bus) => {
+          console.log(bus.lat, bus.lng, bus.route_id);
+          allPositions.push({ lat: bus.lat, lng: bus.lng, id: bus.route_id });
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    });
+
+    setRealTimeBusData(allPositions);
+  }
 
   function onRouteClick(
     routeName: keyof TransitInfoJSON,
@@ -188,8 +231,6 @@ function Map() {
     }
   }
 
-  const selectionOptions = Object.keys(transitModeOptions);
-
   return (
     <Style>
       <div className="map-container">
@@ -208,7 +249,6 @@ function Map() {
                 routeName={routeName}
                 clickHandler={onRouteClick}
               />
-
               {transitInfo[routeName].stops.map((stop, index) => (
                 <StationStop
                   key={index}
@@ -219,6 +259,22 @@ function Map() {
               ))}
             </div>
           ))}
+          {showRealTimeBus && (
+            <MarkerClusterer gridSize={60}>
+              {(clusterer) => (
+                <div>
+                  {realTimeBusData.map((bus, index) => (
+                    <Marker
+                      key={index}
+                      position={new google.maps.LatLng(bus.lat, bus.lng)}
+                      label={bus.id}
+                      clusterer={clusterer}
+                    />
+                  ))}
+                </div>
+              )}
+            </MarkerClusterer>
+          )}
         </GoogleMap>
         <div id="sidebar">
           <div className="title-container">
@@ -237,8 +293,12 @@ function Map() {
           <div className="options-container">
             <SelectOption
               label="Filter by mode"
-              options={selectionOptions}
+              options={Object.keys(transitModeOptions)}
               onModeChange={onModeChange}
+            />
+            <Checkbox
+              label="Show realtime bus"
+              onChange={onShowRealTimeBusChange}
             />
           </div>
           <div className="station-description-container">
