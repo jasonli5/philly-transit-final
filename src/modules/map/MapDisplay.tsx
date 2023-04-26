@@ -13,7 +13,7 @@ import SelectOption from "@/components/Select";
 import transitInfo from "@/assets/TransitInfo.json";
 import styled from "@emotion/styled";
 import { Checkbox } from "@mui/joy";
-import { RealTimeBusDataType } from "@/types";
+import { RealTimeDataType } from "@/types";
 
 const Style = styled.div`
   .map-container {
@@ -156,9 +156,14 @@ function Map() {
     React.useState<keyof typeof transitModeOptions>("Subway");
 
   const [showRealTimeBus, setShowRealTimeBus] = React.useState<boolean>(false);
+  const [showRealTimeRail, setShowRealTimeRail] =
+    React.useState<boolean>(false);
 
   const [realTimeBusData, setRealTimeBusData] =
-    React.useState<RealTimeBusDataType>([]);
+    React.useState<RealTimeDataType>([]);
+
+  const [realTimeRailData, setRealTimeRailData] =
+    React.useState<RealTimeDataType>([]);
 
   const [selectedRoute, setSelectedRoute] = React.useState<
     keyof TransitInfoJSON
@@ -176,13 +181,20 @@ function Map() {
 
   // Update the real time tracking every 10 seconds
   useEffect(() => {
-    setInterval(() => {
-      fetchRealTimeData();
+    const interval = setInterval(() => {
+      if (showRealTimeBus) {
+        fetchRealTimeBusData();
+      }
+      if (showRealTimeRail) {
+        fetchRealTimeRailData();
+      }
     }, 10000);
+
+    return () => clearInterval(interval);
   }, []);
 
-  async function fetchRealTimeData() {
-    const response = await fetch("/api/hello");
+  async function fetchRealTimeBusData() {
+    const response = await fetch("/api/realtime-bus");
     const data = await response.json();
 
     if (!data) return;
@@ -207,10 +219,40 @@ function Map() {
     setRealTimeBusData(allPositions);
   }
 
+  async function fetchRealTimeRailData() {
+    const response = await fetch("/api/realtime-rail");
+    const data = await response.json();
+
+    if (!data) return;
+
+    const routes = data;
+
+    const keys = Object.keys(routes) as Array<keyof typeof routes>;
+
+    const allPositions: any = [];
+
+    try {
+      // @ts-ignore
+      routes.forEach((train) => {
+        console.log(train.lat, train.lng, train.route_id);
+        allPositions.push({ lat: train.lat, lng: train.lon, id: train.line });
+      });
+    } catch (error) {
+      console.log(error);
+    }
+
+    setRealTimeRailData(allPositions);
+  }
+
   // Load all real time buses from SEPTA API
-  async function onShowRealTimeBusChange() {
+  function onShowRealTimeBusChange() {
     setShowRealTimeBus(!showRealTimeBus);
-    fetchRealTimeData();
+    fetchRealTimeBusData();
+  }
+
+  function onShowRealTimeRailChange() {
+    setShowRealTimeRail(!showRealTimeRail);
+    fetchRealTimeRailData();
   }
 
   function onRouteClick(
@@ -286,6 +328,23 @@ function Map() {
               )}
             </MarkerClusterer>
           )}
+          {showRealTimeRail && (
+            <MarkerClusterer gridSize={60}>
+              {(clusterer) => (
+                <div>
+                  {realTimeRailData.map((bus, index) => (
+                    <Marker
+                      key={index}
+                      position={new google.maps.LatLng(bus.lat, bus.lng)}
+                      label={bus.id}
+                      title={bus.id}
+                      clusterer={clusterer}
+                    />
+                  ))}
+                </div>
+              )}
+            </MarkerClusterer>
+          )}
         </GoogleMap>
         <div id="sidebar">
           <div className="title-container">
@@ -311,6 +370,10 @@ function Map() {
             <Checkbox
               label="Show realtime bus"
               onChange={onShowRealTimeBusChange}
+            />
+            <Checkbox
+              label="Show realtime rail"
+              onChange={onShowRealTimeRailChange}
             />
           </div>
           <div className="station-description-container">

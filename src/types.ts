@@ -12,4 +12,4 @@ export type TransitModeOptionsType = {
     // Off: [];
   };
 
-export type RealTimeBusDataType = { lat: number; lng: number; id: string }[];
+export type RealTimeDataType = { lat: number; lng: number; id: string }[];
