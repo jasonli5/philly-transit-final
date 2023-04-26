@@ -13,7 +13,7 @@ import SelectOption from "@/components/Select";
 import transitInfo from "@/assets/TransitInfo.json";
 import styled from "@emotion/styled";
 import { Checkbox } from "@mui/joy";
-import TestData from "@/assets/test.json";
+import { RealTimeBusDataType } from "@/types";
 
 const Style = styled.div`
   .map-container {
@@ -148,6 +148,7 @@ const transitModeOptions: TransitModeOptionsType = {
   Trolley: ["10", "11", "13", "15", "34", "36", "101", "102"],
   Bus: [],
   Other: ["NHSL"],
+  // Off: [],
 };
 
 function Map() {
@@ -155,8 +156,6 @@ function Map() {
     React.useState<keyof typeof transitModeOptions>("Subway");
 
   const [showRealTimeBus, setShowRealTimeBus] = React.useState<boolean>(false);
-
-  type RealTimeBusDataType = { lat: number; lng: number; id: string }[];
 
   const [realTimeBusData, setRealTimeBusData] =
     React.useState<RealTimeBusDataType>([]);
@@ -175,9 +174,14 @@ function Map() {
     setSelectedStation("");
   }, [mode]);
 
-  async function onShowRealTimeBusChange() {
-    setShowRealTimeBus(!showRealTimeBus);
+  // Update the real time tracking every 10 seconds
+  useEffect(() => {
+    setInterval(() => {
+      fetchRealTimeData();
+    }, 10000);
+  }, []);
 
+  async function fetchRealTimeData() {
     const response = await fetch("/api/hello");
     const data = await response.json();
 
@@ -201,6 +205,12 @@ function Map() {
     });
 
     setRealTimeBusData(allPositions);
+  }
+
+  // Load all real time buses from SEPTA API
+  async function onShowRealTimeBusChange() {
+    setShowRealTimeBus(!showRealTimeBus);
+    fetchRealTimeData();
   }
 
   function onRouteClick(
@@ -268,6 +278,7 @@ function Map() {
                       key={index}
                       position={new google.maps.LatLng(bus.lat, bus.lng)}
                       label={bus.id}
+                      title={bus.id}
                       clusterer={clusterer}
                     />
                   ))}
@@ -278,16 +289,17 @@ function Map() {
         </GoogleMap>
         <div id="sidebar">
           <div className="title-container">
-            <h1>Transit Map</h1>
-            <h2>
-              Current selection:{" "}
+            <h1>
               <span className="selectedRouteText">
                 {transitInfo[selectedRoute].name}
               </span>
-            </h2>
+            </h1>
             <h2>Mode of transit: {transitInfo[selectedRoute].mode}</h2>
             <h3>
-              Daily ridership: {transitInfo[selectedRoute].dailyRidership}
+              Daily ridership:{" "}
+              {new Intl.NumberFormat("en-US").format(
+                transitInfo[selectedRoute].dailyRidership!
+              )}
             </h3>
           </div>
           <div className="options-container">

@@ -9,4 +9,7 @@ export type TransitModeOptionsType = {
     Bus: (keyof TransitInfoJSON)[];
     Trolley: (keyof TransitInfoJSON)[];
     Other: (keyof TransitInfoJSON)[];
+    // Off: [];
   };
+
+export type RealTimeBusDataType = { lat: number; lng: number; id: string }[];
