@@ -13,17 +13,23 @@ const MapPage = () => {
       const response = await fetch("/api/hello");
       const data = await response.json();
 
+      if (!data) return;
+
       const routes = data.routes[0];
       const keys = Object.keys(routes) as Array<keyof typeof routes>;
 
       keys.forEach((key) => {
-        // @ts-ignore
-        routes[key].forEach((bus) => {
-          console.log(bus.lat, bus.lng, bus.route_id);
-        });
+        try {
+          // @ts-ignore
+          routes[key].forEach((bus) => {
+            console.log(bus.lat, bus.lng, bus.route_id);
+          });
+        } catch (error) {
+          console.log(error);
+        }
       });
     }
-    getData();
+    // getData();
   }, []);
 
   // Make sure Google Maps API is loaded before rendering the map
