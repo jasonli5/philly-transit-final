@@ -30,6 +30,10 @@ import _36_GEOJSON from "@/assets/routes/36.json";
 import _101_GEOJSON from "@/assets/routes/101.json";
 import _102_GEOJSON from "@/assets/routes/102.json";
 import NHSL_GEOJSON from "@/assets/routes/NHSL.json";
+import PATCO_GEOJSON from "@/assets/routes/PATCO.json";
+
+// Proposed Extension
+import BSL_BLVD_EXT_GEOJSON from "@/assets/routes/BSL-BLVD-EXT.json";
 
 const GEOJSON_ROUTES = {
   BSL: BSL_GEOJSON,
@@ -57,6 +61,8 @@ const GEOJSON_ROUTES = {
   "101": _101_GEOJSON,
   "102": _102_GEOJSON,
   NHSL: NHSL_GEOJSON,
+  PATCO: PATCO_GEOJSON,
+  "BSL-BLVD-EXT": BSL_BLVD_EXT_GEOJSON,
 };
 
 interface TransitRouteProps {

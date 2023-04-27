@@ -412,5 +412,21 @@
     "mode": "other",
     "dailyRidership": null,
     "stops": []
+  },
+  "PATCO": {
+    "name": "PATCO Speedline",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "other",
+    "dailyRidership": null,
+    "stops": []
+  },
+  "BSL-BLVD-EXT": {
+    "name": "Broad Street Line Boulevard Extension",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "other",
+    "dailyRidership": null,
+    "stops": []
   }
 }

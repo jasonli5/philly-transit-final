@@ -147,7 +147,7 @@ const transitModeOptions: TransitModeOptionsType = {
   ],
   Trolley: ["10", "11", "13", "15", "34", "36", "101", "102"],
   Bus: [],
-  Other: ["NHSL"],
+  Other: ["NHSL", "PATCO", "BSL-BLVD-EXT"],
   // Off: [],
 };
 
