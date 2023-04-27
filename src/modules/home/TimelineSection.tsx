@@ -42,6 +42,12 @@ const Style = styled.div`
     height: 100%;
     gap: 2rem;
   }
+
+  @media screen and (max-width: 768px) {
+    .timeline-home-heading {
+      font-size: 2rem;
+    }
+  }
 `;
 
 export const TimelineSection = () => {

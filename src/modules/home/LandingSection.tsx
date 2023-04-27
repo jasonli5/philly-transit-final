@@ -56,6 +56,25 @@ const Style = styled.div`
     width: 50%;
     margin-bottom: 2rem;
   }
+
+  @media screen and (max-width: 768px) {
+    .title {
+      font-size: 2.5rem;
+    }
+
+    .description {
+      font-size: 0.75rem;
+      width: 80%;
+    }
+
+    .headline-container {
+      gap: 0.2rem;
+    }
+
+    .timeline-home-heading {
+      font-size: 2rem;
+    }
+  }
 `;
 
 export const Landing = () => {

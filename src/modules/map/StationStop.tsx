@@ -29,6 +29,7 @@ export const StationStop: React.FC<StationStopProps> = ({
   return (
     <Marker
       position={new google.maps.LatLng(stopPosition[0], stopPosition[1])}
+      title={stationName}
       icon={{
         url: "/images/stop-icon.png",
         scaledSize: new google.maps.Size(iconSize, iconSize),
