@@ -188,10 +188,10 @@ function Map() {
       if (showRealTimeRail) {
         fetchRealTimeRailData();
       }
-    }, 10000);
+    }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [showRealTimeBus, showRealTimeRail]);
 
   async function fetchRealTimeBusData() {
     const response = await fetch("/api/realtime-bus");
@@ -208,8 +208,12 @@ function Map() {
       try {
         // @ts-ignore
         routes[key].forEach((bus) => {
-          console.log(bus.lat, bus.lng, bus.route_id);
-          allPositions.push({ lat: bus.lat, lng: bus.lng, id: bus.route_id });
+          allPositions.push({
+            lat: bus.lat,
+            lng: bus.lng,
+            id: bus.route_id,
+            heading: bus.heading,
+          });
         });
       } catch (error) {
         console.log(error);
@@ -312,7 +316,7 @@ function Map() {
             </div>
           ))}
           {showRealTimeBus && (
-            <MarkerClusterer gridSize={60}>
+            <MarkerClusterer gridSize={70}>
               {(clusterer) => (
                 <div>
                   {realTimeBusData.map((bus, index) => (
