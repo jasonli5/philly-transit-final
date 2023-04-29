@@ -36,7 +36,7 @@ const MapPage = () => {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
   });
-  if (!isLoaded) return <div>Loading...</div>;
+  if (!isLoaded) return <h4 style={{ textAlign: "center" }}>Loading...</h4>;
 
   return (
     <>
