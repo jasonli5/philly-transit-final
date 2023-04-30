@@ -34,6 +34,7 @@ import PATCO_GEOJSON from "@/assets/routes/PATCO.json";
 
 // Proposed Extension
 import BSL_BLVD_EXT_GEOJSON from "@/assets/routes/BSL-BLVD-EXT.json";
+import BSL_NAVAL_EXT_GEOJSON from "@/assets/routes/BSL-NAVAL-EXT.json";
 
 const GEOJSON_ROUTES = {
   BSL: BSL_GEOJSON,
@@ -63,6 +64,7 @@ const GEOJSON_ROUTES = {
   NHSL: NHSL_GEOJSON,
   PATCO: PATCO_GEOJSON,
   "BSL-BLVD-EXT": BSL_BLVD_EXT_GEOJSON,
+  "BSL-NAVAL-EXT": BSL_NAVAL_EXT_GEOJSON,
 };
 
 interface TransitRouteProps {

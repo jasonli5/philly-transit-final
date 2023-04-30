@@ -425,7 +425,15 @@
     "name": "Broad Street Line Boulevard Extension",
     "color": "#FFD700",
     "description": "",
-    "mode": "other",
+    "mode": "proposed extension",
+    "dailyRidership": null,
+    "stops": []
+  },
+  "BSL-NAVAL-EXT": {
+    "name": "Broad Street Naval Extension",
+    "color": "#FFD700",
+    "description": "",
+    "mode": "proposed extension",
     "dailyRidership": null,
     "stops": []
   }

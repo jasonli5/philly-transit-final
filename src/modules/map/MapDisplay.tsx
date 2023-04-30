@@ -149,9 +149,14 @@ const transitModeOptions: TransitModeOptionsType = {
   ],
   Trolley: ["10", "11", "13", "15", "34", "36", "101", "102"],
   Bus: [],
-  Other: ["NHSL", "PATCO", "BSL-BLVD-EXT"],
+  Other: ["NHSL", "PATCO"],
   // Off: [],
 };
+
+const subwayExtensions = [
+  "BSL-BLVD-EXT",
+  "BSL-NAVAL-EXT",
+] as typeof transitModeOptions.Subway;
 
 function Map() {
   const [mode, setMode] =
@@ -159,6 +164,8 @@ function Map() {
 
   const [showRealTimeBus, setShowRealTimeBus] = React.useState<boolean>(false);
   const [showRealTimeRail, setShowRealTimeRail] =
+    React.useState<boolean>(false);
+  const [showProposedLines, setShowProposedLines] =
     React.useState<boolean>(false);
 
   const [realTimeBusData, setRealTimeBusData] =
@@ -175,10 +182,13 @@ function Map() {
 
   const [map, setMap] = React.useState<google.maps.Map | null>(null);
 
-  // Change the selected route when the mode changes
+  // Change the selected route when the mode changes and toggle off checkboxes
   useEffect(() => {
     setSelectedRoute(transitModeOptions[mode][0]);
     setSelectedStation("");
+    setShowRealTimeBus(false);
+    setShowRealTimeRail(false);
+    setShowProposedLines(false);
   }, [mode]);
 
   // Update the real time tracking every 10 seconds
@@ -345,6 +355,15 @@ function Map() {
               ))}
             </div>
           ))}
+          {showProposedLines &&
+            subwayExtensions.map((line) => (
+              <TransitRoute
+                routeName={line}
+                key={line}
+                clickHandler={onRouteClick}
+              />
+            ))}
+
           {showRealTimeBus && (
             <MarkerClusterer gridSize={70}>
               {(clusterer) => (
@@ -407,14 +426,24 @@ function Map() {
               options={Object.keys(transitModeOptions)}
               onModeChange={onModeChange}
             />
-            <Checkbox
-              label="Show realtime bus"
-              onChange={onShowRealTimeBusChange}
-            />
-            <Checkbox
-              label="Show realtime rail"
-              onChange={onShowRealTimeRailChange}
-            />
+            {(mode == "Bus" || mode == "Trolley") && (
+              <Checkbox
+                label="Realtime bus/trolley"
+                onChange={onShowRealTimeBusChange}
+              />
+            )}
+            {mode == "Regional" && (
+              <Checkbox
+                label="Realtime rail"
+                onChange={onShowRealTimeRailChange}
+              />
+            )}
+            {mode == "Subway" && (
+              <Checkbox
+                label="Proposed subway lines"
+                onChange={() => setShowProposedLines(!showProposedLines)}
+              />
+            )}
           </div>
           <div className="station-description-container">
             <h2>{selectedStation}</h2>

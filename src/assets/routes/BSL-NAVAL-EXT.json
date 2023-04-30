@@ -1,0 +1,23 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Broad Street Line Naval Extension",
+        "stroke": "#ff7b00",
+        "stroke-width": 4,
+        "stroke-opacity": 1
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-75.173607, 39.90549],
+          [-75.175495, 39.897193],
+          [-75.163307, 39.889538],
+          [-75.157642, 39.8899]
+        ]
+      }
+    }
+  ]
+}
