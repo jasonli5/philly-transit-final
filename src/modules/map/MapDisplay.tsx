@@ -11,6 +11,7 @@ import TransitRoute from "@/modules/map/TransitRoute";
 import StationStop from "@/modules/map/StationStop";
 import SelectOption from "@/components/Select";
 import transitInfo from "@/assets/TransitInfo.json";
+import MapControl from "@/modules/map/MapControl";
 import styled from "@emotion/styled";
 import { Checkbox } from "@mui/joy";
 import { RealTimeDataType } from "@/types";
@@ -299,6 +300,34 @@ function Map() {
           options={mapOptions}
           onLoad={(map) => setMap(map)}
         >
+          <MapControl position="BOTTOM_CENTER">
+            <button
+              style={{
+                backgroundColor: "#466adf",
+                border: "none",
+                borderRadius: "1rem",
+                color: "white",
+                fontFamily: "Inter",
+                padding: "0.5rem 1rem",
+                margin: "3rem",
+                cursor: "pointer",
+                fontSize: "1rem",
+              }}
+              onClick={() => {
+                navigator.geolocation.getCurrentPosition((position) => {
+                  const pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude,
+                  };
+                  map?.setCenter(pos);
+                  map?.setZoom(16);
+                });
+              }}
+            >
+              Current Location
+            </button>
+          </MapControl>
+
           {transitModeOptions[mode].map((routeName, key) => (
             <div key={key} className="route-container">
               <TransitRoute
