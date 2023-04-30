@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import styled from "@emotion/styled";
 import React from "react";
+import Image from "next/image";
 import GalleryData from "@/assets/Gallery.json";
 import Meta from "@/components/Meta";
 
@@ -46,7 +47,7 @@ const Style = styled.div`
     align-items: center;
   }
 
-  img {
+  .image {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -84,7 +85,7 @@ const Gallery = () => {
               size={
                 key % 3 === 0 ? "large" : key % 3 === 1 ? "medium" : "small"
               }
-              src={`gallery/${item.name}`}
+              src={`/gallery/${item.name}`}
               description={item.description}
             />
           ))}
@@ -126,13 +127,19 @@ const CardStyled = styled.div`
 interface CardProps {
   size: "small" | "medium" | "large";
   src: string;
-  description?: string;
+  description: string;
 }
 
 const Card: React.FC<CardProps> = ({ size, src, description }) => {
   return (
     <CardStyled className={`card ${size}`}>
-      <img src={src} alt={description} />
+      <Image
+        className="image"
+        src={src}
+        alt={description}
+        width={600}
+        height={600}
+      />
     </CardStyled>
   );
 };
