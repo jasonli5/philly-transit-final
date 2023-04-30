@@ -14,6 +14,7 @@ import transitInfo from "@/assets/TransitInfo.json";
 import styled from "@emotion/styled";
 import { Checkbox } from "@mui/joy";
 import { RealTimeDataType } from "@/types";
+import styles from "@/styles/Map.module.css";
 
 const Style = styled.div`
   .map-container {
@@ -333,21 +334,27 @@ function Map() {
             </MarkerClusterer>
           )}
           {showRealTimeRail && (
-            <MarkerClusterer gridSize={60}>
-              {(clusterer) => (
-                <div>
-                  {realTimeRailData.map((bus, index) => (
-                    <Marker
-                      key={index}
-                      position={new google.maps.LatLng(bus.lat, bus.lng)}
-                      label={bus.id}
-                      title={bus.id}
-                      clusterer={clusterer}
-                    />
-                  ))}
-                </div>
-              )}
-            </MarkerClusterer>
+            <div>
+              {realTimeRailData.map((train, index) => (
+                <Marker
+                  key={index}
+                  position={new google.maps.LatLng(train.lat, train.lng)}
+                  label={{
+                    text: train.id,
+                    className: styles["train-label"],
+                    color: "white",
+                    fontSize: "12px",
+                    fontFamily: "Inter",
+                  }}
+                  title={train.id}
+                  icon={{
+                    path: google.maps.SymbolPath.CIRCLE,
+                    scale: 0,
+                  }}
+                  options={{ zIndex: 1000 }}
+                />
+              ))}
+            </div>
           )}
         </GoogleMap>
         <div id="sidebar">

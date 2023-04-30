@@ -1,0 +1,18 @@
+.train-label {
+    background-color: #466adf;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    display: block;
+}
+
+.train-label::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: calc(50% - 0.5rem);
+    border-top: 0.8rem solid #466adf;
+    border-right: 0.5rem solid transparent;
+    border-left: 0.5rem solid transparent;
+    z-index: -1;
+}
