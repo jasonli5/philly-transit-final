@@ -132,6 +132,11 @@ export const Header: React.FC<HeaderProps> = ({ fixed }) => {
               </Link>
             </li>
             <li>
+              <Link href="/gallery" onClick={toggleMenu}>
+                Gallery
+              </Link>
+            </li>
+            <li>
               <Link href="/map" onClick={toggleMenu}>
                 Map
               </Link>

@@ -1,11 +1,13 @@
 import Header from "@/components/Header";
 import styled from "@emotion/styled";
 import React from "react";
+import GalleryData from "@/assets/Gallery.json";
+import Meta from "@/components/Meta";
 
 const StyleVariables = {
-  card_width: "250px",
-  card_border_radius: "16px",
+  card_width: "300px",
   row_increment: "10px",
+  card_border_radius: "16px",
   card_small: 26,
   card_medium: 33,
   card_large: 45,
@@ -14,15 +16,18 @@ const StyleVariables = {
 const Style = styled.div`
   .background {
     background-color: #1a1a1a;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 4rem;
+    padding: 2rem 0;
   }
 
   .container {
     margin: 0;
     padding: 0;
     width: 70%;
+    max-width: 1500px;
     display: grid;
     grid-template-columns: repeat(auto-fill, ${StyleVariables.card_width});
     grid-auto-rows: ${StyleVariables.row_increment};
@@ -36,21 +41,30 @@ const Style = styled.div`
     background-color: rgba(16, 92, 158, 0.062);
     overflow: hidden;
     transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .card:hover {
-    transform: scale(1.05);
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
   }
 
-  .card_small {
+  .small {
+    height: 240px;
     grid-row-end: span ${StyleVariables.card_small};
   }
 
-  .card_medium {
+  .medium {
+    height: 310px;
     grid-row-end: span ${StyleVariables.card_medium};
   }
 
-  .card_large {
+  .large {
+    height: 430px;
     grid-row-end: span ${StyleVariables.card_large};
   }
 `;
@@ -58,35 +72,68 @@ const Style = styled.div`
 const Gallery = () => {
   return (
     <Style>
+      <Meta title="Gallery" />
+      <header>
+        <Header fixed />
+      </header>
       <div className="background">
         <div className="container">
-          <div className="card card_small"></div>
-          <div className="card card_medium"></div>
-          <div className="card card_large"></div>
-          <div className="card card_small"></div>
-          <div className="card card_medium"></div>
-          <div className="card card_large"></div>
-          <div className="card card_small"></div>
-          <div className="card card_medium"></div>
-          <div className="card card_large"></div>
-          <div className="card card_small"></div>
-          <div className="card card_medium"></div>
-          <div className="card card_large"></div>
-          <div className="card card_small"></div>
-          <div className="card card_medium"></div>
-          <div className="card card_large"></div>
-          <div className="card card_small"></div>
-          <div className="card card_medium"></div>
-          <div className="card card_large"></div>
-          <div className="card card_small"></div>
-          <div className="card card_medium"></div>
-          <div className="card card_large"></div>
-          <div className="card card_small"></div>
-          <div className="card card_medium"></div>
-          <div className="card card_large"></div>
+          {GalleryData.map((item, key) => (
+            <Card
+              key={item.name}
+              size={
+                key % 3 === 0 ? "large" : key % 3 === 1 ? "medium" : "small"
+              }
+              src={`gallery/${item.name}`}
+              description={item.description}
+            />
+          ))}
         </div>
       </div>
     </Style>
+  );
+};
+
+const CardStyled = styled.div`
+  padding: 0;
+  margin: 15px 10px;
+  border-radius: ${StyleVariables.card_border_radius};
+  background-color: rgba(16, 92, 158, 0.062);
+  overflow: hidden;
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+    z-index: 1;
+  }
+
+  .small {
+    height: 250px;
+    grid-row-end: span ${StyleVariables.card_small};
+  }
+
+  .medium {
+    height: 300px;
+    grid-row-end: span ${StyleVariables.card_medium};
+  }
+
+  .large {
+    height: 380px;
+    grid-row-end: span ${StyleVariables.card_large};
+  }
+`;
+
+interface CardProps {
+  size: "small" | "medium" | "large";
+  src: string;
+  description?: string;
+}
+
+const Card: React.FC<CardProps> = ({ size, src, description }) => {
+  return (
+    <CardStyled className={`card ${size}`}>
+      <img src={src} alt={description} />
+    </CardStyled>
   );
 };
 
