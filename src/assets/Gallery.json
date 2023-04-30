@@ -57,7 +57,6 @@
   { "name": "mfl220-1.jpeg", "description": "" },
   { "name": "mfl220-2.jpeg", "description": "" },
   { "name": "mfl-ex1.jpeg", "description": "" },
-  { "name": "mfl-ex2.jpeg", "description": "" },
   { "name": "tro880-1.jpeg", "description": "" },
   { "name": "tro880-2.jpeg", "description": "" },
   { "name": "tro880-3.jpeg", "description": "" },
@@ -95,6 +94,5 @@
   { "name": "tro210-1.jpeg", "description": "" },
   { "name": "tro210-3.jpg", "description": "" },
   { "name": "tro220-1.jpeg", "description": "" },
-  { "name": "tro220-2.jpeg", "description": "" },
-  { "name": "tro220-3.jpeg", "description": "" }
+  { "name": "tro220-2.jpeg", "description": "" }
 ]
