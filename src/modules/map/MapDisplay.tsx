@@ -93,6 +93,22 @@ const Style = styled.div`
     font-size: 1.5rem;
   }
 
+  .image-container {
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .image {
+    object-fit: cover;
+    object-position: center;
+  }
+
   @media screen and (max-width: 768px) {
     .map-container {
       flex-direction: column;
@@ -463,13 +479,17 @@ function Map() {
           {selectedStation[1] != "" && (
             <div className="station-description-container">
               <h2 className="station-title">{selectedStation[0]}</h2>
-              <Image
-                style={{ boxShadow: "rgba(0, 0, 0, 0.25) 0px 0px 10px" }}
-                alt={selectedStation[1]}
-                width={300}
-                height={300}
-                src={`/stations/${selectedStation[1]}`}
-              />
+              <div className="image-container">
+                <Image
+                  className="image"
+                  style={{
+                    boxShadow: "rgba(0, 0, 0, 0.25) 0px 0px 10px",
+                  }}
+                  alt={selectedStation[1]}
+                  fill
+                  src={`/stations/${selectedStation[1]}`}
+                />
+              </div>
             </div>
           )}
         </div>
