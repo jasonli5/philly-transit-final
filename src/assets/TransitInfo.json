@@ -193,7 +193,7 @@
       {
         "name": "8th Street Station",
         "position": [39.9511883, -75.1533089],
-        "img": "8th.jpg"
+        "img": "mfl-8th.jpg"
       },
       {
         "name": "5th Street/Independence Hall Station",
@@ -280,6 +280,11 @@
         "name": "Chinatown Station",
         "position": [39.955558334109455, -75.15296010400488],
         "img": "chinatown.jpg"
+      },
+      {
+        "name": "8th & Market Street Station",
+        "position": [39.95096526064631, -75.15349434041507],
+        "img": "bsl-8th.jpg"
       }
     ]
   },
