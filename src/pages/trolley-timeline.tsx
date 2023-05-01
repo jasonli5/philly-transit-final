@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "@/components/Header";
 import Timeline from "@/modules/timeline/Timeline";
+import Meta from "@/components/Meta";
 
 const content = [
   {
@@ -49,6 +50,7 @@ const content = [
 export const TrolleyTimeline = () => {
   return (
     <React.Fragment>
+      <Meta title="Trolley Timeline" />
       <Header fixed />
       <Timeline
         title="The history of Trolley Lines"

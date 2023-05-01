@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "@/components/Header";
 import Timeline from "@/modules/timeline/Timeline";
+import Meta from "@/components/Meta";
 
 const content = [
   {
@@ -56,6 +57,7 @@ const content = [
 export const MFLTimeline = () => {
   return (
     <React.Fragment>
+      <Meta title="Market-Frankford Line Timeline" />
       <Header fixed />
       <Timeline
         title="The history of Market-Frankford Line"

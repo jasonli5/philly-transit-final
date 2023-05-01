@@ -330,7 +330,7 @@ function Map() {
                 border: "none",
                 borderRadius: "1rem",
                 color: "white",
-                fontFamily: "Inter",
+                fontFamily: "Inter, sans-serif",
                 padding: "0.5rem 1rem",
                 margin: "3rem",
                 cursor: "pointer",
@@ -464,6 +464,7 @@ function Map() {
             <div className="station-description-container">
               <h2 className="station-title">{selectedStation[0]}</h2>
               <Image
+                style={{ boxShadow: "rgba(0, 0, 0, 0.25) 0px 0px 10px" }}
                 alt={selectedStation[1]}
                 width={300}
                 height={300}
