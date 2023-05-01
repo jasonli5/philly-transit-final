@@ -15,7 +15,8 @@ import styles from "@/styles/Map.module.css";
 const Style = styled.div`
   .map-container {
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     display: flex;
   }
 
@@ -29,6 +30,10 @@ const Style = styled.div`
     z-index: 1;
     background-color: white;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
   }
 
   .textbox {
@@ -76,6 +81,7 @@ const Style = styled.div`
     padding: 2rem 1rem;
     margin: 2rem auto;
     text-align: center;
+    position: relative;
   }
 
   .text {
@@ -89,8 +95,9 @@ const Style = styled.div`
   }
 
   .image-container {
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
+    max-height: 350px;
     overflow: hidden;
     border-radius: 1rem;
     display: flex;
@@ -476,6 +483,7 @@ function Map() {
               <h2 className="station-title">{selectedStation[0]}</h2>
               <div className="image-container">
                 <Image
+                  priority
                   className="image"
                   style={{
                     boxShadow: "rgba(0, 0, 0, 0.25) 0px 0px 10px",
