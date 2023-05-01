@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import Image from "next/image";
-import { useEffect } from "react";
 
 const Style = styled.div`
   .timeline-section {
@@ -26,17 +25,23 @@ const Style = styled.div`
   .line {
     border: 10px solid #0044ff;
     position: absolute;
-    height: 370vh;
+    height: calc(100% - 10rem);
     margin: 0 auto;
     width: 1px;
     border-radius: 12px;
     margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .timeline-content {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    position: relative;
+    overflow: hidden;
   }
 
   .content {
@@ -88,16 +93,16 @@ const Style = styled.div`
   }
 
   .circle {
-    display: inline-block;
+    /* display: inline-block;
     position: absolute;
-    margin: 0 auto;
-    right: calc(50% - 2rem);
+    margin: 0 auto; */
     height: 4rem;
     width: 4rem;
     background-color: white;
     border: 0.75rem solid black;
     border-radius: 2rem;
-    top: -2rem;
+    offset-anchor: 50%;
+    margin: -1rem;
   }
 
   @media screen and (max-width: 768px) {
@@ -123,17 +128,13 @@ const Style = styled.div`
       width: 100%;
     }
 
-    .circle {
-      right: calc(50% - 2rem);
-    }
-
     .even .content-text {
       order: 0;
     }
 
     .line {
       margin-top: -2rem;
-      height: 600vh;
+      height: calc(100% - 2rem);
     }
   }
 `;
@@ -155,12 +156,6 @@ export const Timeline: React.FC<TimelineProps> = ({
   content,
   lineColor,
 }) => {
-  useEffect(() => {
-    const height = document.getElementById("container-height")?.offsetHeight;
-    console.log(height);
-    document.getElementById("line-height")!.style.height = `${height! - 300}px`;
-  }, []);
-
   return (
     <Style>
       <section className="timeline-section">
@@ -178,7 +173,8 @@ export const Timeline: React.FC<TimelineProps> = ({
                 borderColor: lineColor,
               }}
             >
-              <span className="circle"></span>;
+              <span className="circle"></span>
+              <span className="circle"></span>
             </div>
 
             <div className="content">
