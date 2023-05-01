@@ -78,9 +78,19 @@ const Style = styled.div`
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 2rem 1rem;
+    margin: 2rem auto;
     text-align: center;
+  }
+
+  .text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: black;
+  }
+
+  .station-title {
+    font-size: 1.5rem;
   }
 
   @media screen and (max-width: 768px) {
@@ -178,14 +188,16 @@ function Map() {
     keyof TransitInfoJSON
   >(transitModeOptions[mode][0]);
 
-  const [selectedStation, setSelectedStation] = React.useState<string>("");
+  const [selectedStation, setSelectedStation] = React.useState<
+    [stationName: string, stationImg: string]
+  >(["", ""]);
 
   const [map, setMap] = React.useState<google.maps.Map | null>(null);
 
   // Change the selected route when the mode changes and toggle off checkboxes
   useEffect(() => {
     setSelectedRoute(transitModeOptions[mode][0]);
-    setSelectedStation("");
+    setSelectedStation(["", ""]);
     setShowRealTimeBus(false);
     setShowRealTimeRail(false);
     setShowProposedLines(false);
@@ -290,9 +302,10 @@ function Map() {
 
   function onStationClick(
     event: google.maps.MapMouseEvent,
-    stationName: string
+    stationName: string,
+    stationImg: string
   ) {
-    setSelectedStation(stationName);
+    setSelectedStation([stationName, stationImg]);
     if (map && event.latLng) {
       map.panTo(event.latLng);
       map.setZoom(16);
@@ -350,7 +363,7 @@ function Map() {
                   key={index}
                   stopPosition={stop.position}
                   stationName={stop.name}
-                  clickHandler={onStationClick}
+                  clickHandler={(e) => onStationClick(e, stop.name, stop.img)}
                 />
               ))}
             </div>
@@ -412,8 +425,10 @@ function Map() {
                 {transitInfo[selectedRoute].name}
               </span>
             </h1>
-            <h2>Mode of transit: {transitInfo[selectedRoute].mode}</h2>
-            <h3>
+            <h2 className="text">
+              Mode of transit: {transitInfo[selectedRoute].mode}
+            </h2>
+            <h3 className="text">
               Daily ridership:{" "}
               {new Intl.NumberFormat("en-US").format(
                 transitInfo[selectedRoute].dailyRidership!
@@ -445,15 +460,17 @@ function Map() {
               />
             )}
           </div>
-          <div className="station-description-container">
-            <h2>{selectedStation}</h2>
-            <Image
-              alt={selectedStation}
-              width={150}
-              height={150}
-              src={`/images/${selectedStation}-station`}
-            />
-          </div>
+          {selectedStation[1] != "" && (
+            <div className="station-description-container">
+              <h2 className="station-title">{selectedStation[0]}</h2>
+              <Image
+                alt={selectedStation[1]}
+                width={300}
+                height={300}
+                src={`/stations/${selectedStation[1]}`}
+              />
+            </div>
+          )}
         </div>
       </div>
     </Style>

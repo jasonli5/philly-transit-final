@@ -8,91 +8,113 @@
     "stops": [
       {
         "name": "Fern Rock Transportation Center",
-        "position": [40.04182945431144, -75.1368497075527]
+        "position": [40.04182945431144, -75.1368497075527],
+        "img": "fernrock.jpg"
       },
       {
         "name": "Olney Transportation Center",
-        "position": [40.03907949659955, -75.1446934913967]
+        "position": [40.03907949659955, -75.1446934913967],
+        "img": "olney.jpg"
       },
       {
         "name": "Logan Station",
-        "position": [40.030387254237006, -75.14626117873726]
+        "position": [40.030387254237006, -75.14626117873726],
+        "img": "logan.jpg"
       },
       {
         "name": "Wyoming Station",
-        "position": [40.02455837837375, -75.14790256495647]
+        "position": [40.02455837837375, -75.14790256495647],
+        "img": "wyoming.jpg"
       },
       {
         "name": "Hunting Park Station",
-        "position": [40.016933727995735, -75.14950337113358]
+        "position": [40.016933727995735, -75.14950337113358],
+        "img": "hunting-park.jpg"
       },
       {
         "name": "Erie Station",
-        "position": [40.00923027292238, -75.15119852647538]
+        "position": [40.00923027292238, -75.15119852647538],
+        "img": "erie.jpg"
       },
       {
         "name": "Allegheny Station",
-        "position": [40.001505409881744, -75.15313111249904]
+        "position": [40.001505409881744, -75.15313111249904],
+        "img": "allegheny.jpg"
       },
       {
         "name": "North Philadelphia Station",
-        "position": [39.99435271377966, -75.154307204745]
+        "position": [39.99435271377966, -75.154307204745],
+        "img": "north-philadelphia.jpg"
       },
       {
         "name": "Susquehanna-Dauphin Station",
-        "position": [39.98702276438566, -75.15602755913976]
+        "position": [39.98702276438566, -75.15602755913976],
+        "img": "susdauphin.jpg"
       },
       {
         "name": "Cecil B. Moore Station",
-        "position": [39.9787016916122, -75.15785535570367]
+        "position": [39.9787016916122, -75.15785535570367],
+        "img": "cecil.jpg"
       },
       {
         "name": "Girard Station",
-        "position": [39.971511634909255, -75.15939282880184]
+        "position": [39.971511634909255, -75.15939282880184],
+        "img": "bslgirard.jpg"
       },
       {
         "name": "Fairmount Station",
-        "position": [39.96666222576834, -75.16065566158595]
+        "position": [39.96666222576834, -75.16065566158595],
+        "img": "fairmount.jpg"
       },
       {
         "name": "Spring Garden Station",
-        "position": [39.96238028530961, -75.16171389652638]
+        "position": [39.96238028530961, -75.16171389652638],
+        "img": "bsl-spring-garden.jpg"
       },
       {
         "name": "Race Vine Station",
-        "position": [39.95752783800313, -75.16234246130396]
+        "position": [39.95752783800313, -75.16234246130396],
+        "img": "racevine.jpg"
       },
       {
         "name": "City Hall Station",
-        "position": [39.95246380576187, -75.1640625694813]
+        "position": [39.95246380576187, -75.1640625694813],
+        "img": "cityhall.jpg"
       },
       {
         "name": "Walnut-Locust Station",
-        "position": [39.949372112125644, -75.16445971594635]
+        "position": [39.949372112125644, -75.16445971594635],
+        "img": "walnut.jpg"
       },
       {
         "name": "Lombard-South Station",
-        "position": [39.94378488915983, -75.16548229961568]
+        "position": [39.94378488915983, -75.16548229961568],
+        "img": "lombard.jpg"
       },
       {
         "name": "Ellsworth-Federal Station",
-        "position": [39.936188645983826, -75.1671305838643]
+        "position": [39.936188645983826, -75.1671305838643],
+        "img": "ellsworth.jpg"
       },
       {
         "name": "Tasker Morris Station",
-        "position": [39.92980430624261, -75.1685179160225]
+        "position": [39.92980430624261, -75.1685179160225],
+        "img": "tasker.jpg"
       },
       {
         "name": "Snyder Station",
-        "position": [39.92435902719476, -75.16970968693968]
+        "position": [39.92435902719476, -75.16970968693968],
+        "img": "snyder.jpg"
       },
       {
         "name": "Oregon Station",
-        "position": [39.916815824589314, -75.17112798091331]
+        "position": [39.916815824589314, -75.17112798091331],
+        "img": "oregon.jpg"
       },
       {
         "name": "NRG Station",
-        "position": [39.90543305096446, -75.17391312247966]
+        "position": [39.90543305096446, -75.17391312247966],
+        "img": "nrg.jpg"
       }
     ]
   },
@@ -105,94 +127,143 @@
     "stops": [
       {
         "name": "69th Street Transportation Center",
-        "position": [39.962024, -75.2595182]
+        "position": [39.962024, -75.2595182],
+        "img": "69th.jpg"
       },
-      { "name": "Millbourne Station", "position": [39.9643947, -75.2524045] },
+      {
+        "name": "Millbourne Station",
+        "position": [39.9643947, -75.2524045],
+        "img": "millbourne.jpg"
+      },
       {
         "name": "63rd Street Station",
-        "position": [39.9624901, -75.2465335]
+        "position": [39.9624901, -75.2465335],
+        "img": "63rd.jpg"
       },
       {
         "name": "60th Street Station",
-        "position": [39.9620353, -75.2407516]
+        "position": [39.9620353, -75.2407516],
+        "img": "60th.jpg"
       },
       {
         "name": "56th Street Station",
-        "position": [39.9608288, -75.2331221]
+        "position": [39.9608288, -75.2331221],
+        "img": "56th.jpg"
       },
-      { "name": "52nd Street Station", "position": [39.959976, -75.224892] },
-      { "name": "46th Street Station", "position": [39.958618, -75.214027] },
+      {
+        "name": "52nd Street Station",
+        "position": [39.959976, -75.224892],
+        "img": "52nd.jpg"
+      },
+      {
+        "name": "46th Street Station",
+        "position": [39.958618, -75.214027],
+        "img": "46th.jpg"
+      },
       {
         "name": "40th Street Station",
-        "position": [39.9570452, -75.2017793]
+        "position": [39.9570452, -75.2017793],
+        "img": "40th.jpg"
       },
       {
         "name": "34th Street Station",
-        "position": [39.9558604, -75.19147269999999]
+        "position": [39.9558604, -75.19147269999999],
+        "img": "34th.jpg"
       },
       {
         "name": "30th Street Station",
-        "position": [39.9550517, -75.1834945]
+        "position": [39.9550517, -75.1834945],
+        "img": "30th.jpg"
       },
-      { "name": "15th Street Station", "position": [39.952503, -75.165367] },
-      { "name": "13th Street Station", "position": [39.952137, -75.161453] },
+      {
+        "name": "15th Street Station",
+        "position": [39.952503, -75.165367],
+        "img": "15th.jpg"
+      },
+      {
+        "name": "13th Street Station",
+        "position": [39.952137, -75.161453],
+        "img": "13th.jpg"
+      },
       {
         "name": "11th Street Station",
-        "position": [39.9516844, -75.1580438]
+        "position": [39.9516844, -75.1580438],
+        "img": "11th.jpg"
       },
-      { "name": "8th Street Station", "position": [39.9511883, -75.1533089] },
+      {
+        "name": "8th Street Station",
+        "position": [39.9511883, -75.1533089],
+        "img": "8th.jpg"
+      },
       {
         "name": "5th Street/Independence Hall Station",
-        "position": [39.9505596, -75.14893359999999]
+        "position": [39.9505596, -75.14893359999999],
+        "img": "5th.jpg"
       },
       {
         "name": "2nd Street Station",
-        "position": [39.949909400462104, -75.14376670014494]
+        "position": [39.949909400462104, -75.14376670014494],
+        "img": "2nd.jpg"
       },
       {
         "name": "Spring Garden Station",
-        "position": [39.9605083, -75.1404125]
+        "position": [39.9605083, -75.1404125],
+        "img": "mfl-spring-garden.jpg"
       },
       {
         "name": "Girard Station",
-        "position": [39.9692414, -75.13618029999999]
+        "position": [39.9692414, -75.13618029999999],
+        "img": "mfl-girard.jpg"
       },
       {
         "name": "Berks Station",
-        "position": [39.978623107624074, -75.13344571465626]
+        "position": [39.978623107624074, -75.13344571465626],
+        "img": "berks.jpg"
       },
       {
         "name": "York-Dauphin Station",
-        "position": [39.985162, -75.1321778]
+        "position": [39.985162, -75.1321778],
+        "img": "york.jpg"
       },
       {
         "name": "Huntingdon Station",
-        "position": [39.98880503103831, -75.12727519059067]
+        "position": [39.98880503103831, -75.12727519059067],
+        "img": "huntington.png"
       },
       {
         "name": "Somerset Station",
-        "position": [39.9914837, -75.12262179999999]
+        "position": [39.9914837, -75.12262179999999],
+        "img": "somerset.png"
       },
-      { "name": "Allegheny Station", "position": [39.9963725, -75.1139625] },
+      {
+        "name": "Allegheny Station",
+        "position": [39.9963725, -75.1139625],
+        "img": "mfl-allegheny.jpg"
+      },
       {
         "name": "Tioga Station",
-        "position": [40.0004596, -75.10654509999999]
+        "position": [40.0004596, -75.10654509999999],
+        "img": "tioga.jpg"
       },
       {
         "name": "Erie-Torresdale Station",
-        "position": [40.0060429, -75.0962078]
+        "position": [40.0060429, -75.0962078],
+        "img": "erie-torresdale.jpg"
       },
       {
         "name": "Church Station",
-        "position": [40.01047510000001, -75.0889715]
+        "position": [40.01047510000001, -75.0889715],
+        "img": "church.jpg"
       },
       {
         "name": "Arrott Transportation Center",
-        "position": [40.01658518040249, -75.08376009940632]
+        "position": [40.01658518040249, -75.08376009940632],
+        "img": "arrott.jpg"
       },
       {
         "name": "Frankford Transportation Center",
-        "position": [40.023013182624226, -75.07795559255067]
+        "position": [40.023013182624226, -75.07795559255067],
+        "img": "frankford.jpg"
       }
     ]
   },
@@ -207,7 +278,8 @@
     "stops": [
       {
         "name": "Chinatown Station",
-        "position": [39.955558334109455, -75.15296010400488]
+        "position": [39.955558334109455, -75.15296010400488],
+        "img": "chinatown.jpg"
       }
     ]
   },
