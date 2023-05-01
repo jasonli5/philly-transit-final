@@ -5,6 +5,7 @@ import Image from "next/image";
 import GalleryData from "@/assets/Gallery.json";
 import Meta from "@/components/Meta";
 import BackToTopButton from "@/components/BackToTopButton";
+import Footer from "@/components/Footer";
 
 const StyleVariables = {
   card_width: "300px",
@@ -93,6 +94,7 @@ const Gallery = () => {
         </div>
       </div>
       <BackToTopButton />
+      <Footer color />
     </Style>
   );
 };

@@ -2,6 +2,8 @@ import React from "react";
 import Header from "@/components/Header";
 import Timeline from "@/modules/timeline/Timeline";
 import Meta from "@/components/Meta";
+import BackToTopButton from "@/components/BackToTopButton";
+import Footer from "@/components/Footer";
 
 const content = [
   {
@@ -74,6 +76,7 @@ export const BSLTimeline = () => {
         lineColor="#ff7b00"
       />
       <BackToTopButton />
+      <Footer />
     </React.Fragment>
   );
 };

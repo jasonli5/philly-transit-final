@@ -14,7 +14,7 @@ const Style = styled.div`
     justify-content: center;
     align-items: center;
     gap: 1.2rem;
-    padding: 2rem;
+    padding: 3rem 2rem;
     margin: 0 auto;
     max-width: 80%;
     height: 100%;

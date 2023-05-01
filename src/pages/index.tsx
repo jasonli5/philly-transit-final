@@ -6,6 +6,7 @@ import LandingSection from "@/modules/home/LandingSection";
 import TimelineSection from "@/modules/home/TimelineSection";
 import MapSection from "@/modules/home/MapSection";
 import Meta from "@/components/Meta";
+import Footer from "@/components/Footer";
 
 const Style = styled.div``;
 
@@ -17,6 +18,7 @@ export default function Home() {
       <LandingSection />
       <TimelineSection />
       <MapSection />
+      <Footer />
     </Style>
   );
 }

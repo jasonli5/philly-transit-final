@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import React from "react";
 import Image from "next/image";
 import BackToTopButton from "@/components/BackToTopButton";
+import Footer from "@/components/Footer";
 
 const Style = styled.div`
   .background {
@@ -286,6 +287,7 @@ const Proposals = () => {
         </section>
       </div>
       <BackToTopButton />
+      <Footer />
     </Style>
   );
 };
