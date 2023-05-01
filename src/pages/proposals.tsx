@@ -142,6 +142,11 @@ const Style = styled.div`
       flex-direction: column;
       gap: 2rem;
     }
+
+    .description {
+      width: 90%;
+      font-size: 0.9rem;
+    }
   }
 `;
 
@@ -155,7 +160,7 @@ const Proposals = () => {
           <h1 className="title">Plan Proposals</h1>
           <p className="description">
             Have you ever woken up to a long commute and wish things were
-            easier? Maybe a station nearby, or a bus route just oustide your
+            easier? Maybe a station nearby, or a bus route just outside your
             house that took you where you needed to go? Here are a list of
             proposals that could have done just that but unfortunately, are only
             a thought of the past.
