@@ -172,7 +172,7 @@ const Proposals = () => {
                 commissioner of the Department of City Transit, A. Merrit
                 Taylor, in July 1912. The plan would allow service to the
                 city&apos;s northeastern suburbs including, Frankford, Mayfair,
-                Rhawnhurts, Bustleton, and Parkwood. The original plan was
+                Rhawnhurst, Bustleton, and Parkwood. The original plan was
                 approved and work began in 1914 up until a lack of funds and war
                 caused a halt on work. It would take another three decades for
                 the plan to be spoken about once again. The plan was revised to

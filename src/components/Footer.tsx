@@ -9,7 +9,9 @@ const Style = styled.div`
     justify-content: center;
     padding: 3rem 0;
     color: white;
+    z-index: 100;
   }
+
   .footer-container {
     width: 80%;
     display: flex;
@@ -48,6 +50,28 @@ const Style = styled.div`
   .color {
     background-color: white;
     color: #1a1a1a;
+  }
+
+  @media screen and (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    .text-container {
+      text-align: center;
+    }
+
+    .text-container p {
+      margin: 0 auto;
+    }
+
+    .rights-text {
+      text-align: center;
+    }
   }
 `;
 
