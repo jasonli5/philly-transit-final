@@ -73,6 +73,7 @@ export const BSLTimeline = () => {
         content={content}
         lineColor="#ff7b00"
       />
+      <BackToTopButton />
     </React.Fragment>
   );
 };

@@ -3,13 +3,14 @@ import Meta from "@/components/Meta";
 import styled from "@emotion/styled";
 import React from "react";
 import Image from "next/image";
+import BackToTopButton from "@/components/BackToTopButton";
 
 const Style = styled.div`
   .background {
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #d8d8d8;
+    background-color: #e6e6e6;
   }
 
   .odd {
@@ -168,20 +169,21 @@ const Proposals = () => {
               <p>
                 The Roosevelt Boulevard Extension was first proposed by the
                 commissioner of the Department of City Transit, A. Merrit
-                Taylor, in July 1912. The plan would allow service to the city's
-                northeastern suburbs including, Frankford, Mayfair, Rhawnhurts,
-                Bustleton, and Parkwood. The original plan was approved and work
-                began in 1914 up until a lack of funds and war caused a halt on
-                work. It would take another three decades for the plan to be
-                spoken about once again. The plan was revised to go further
-                northeast branching off from Broad St just north of Erie
-                Station. After residents saw the plans for the line, an outrage
-                was made objecting "that it would bring undesirables to the
-                area." This plan was since then scrapped and replaced for a
-                parking lot at Fern Rock Transporation Center. Later in the
-                1960s, the plan was spoken of again. Work had been done in
-                anticipation of the new line and as a result, a station was
-                built under Adam's Ave and the Boulevard.
+                Taylor, in July 1912. The plan would allow service to the
+                city&apos;s northeastern suburbs including, Frankford, Mayfair,
+                Rhawnhurts, Bustleton, and Parkwood. The original plan was
+                approved and work began in 1914 up until a lack of funds and war
+                caused a halt on work. It would take another three decades for
+                the plan to be spoken about once again. The plan was revised to
+                go further northeast branching off from Broad St just north of
+                Erie Station. After residents saw the plans for the line, an
+                outrage was made objecting &quot;that it would bring
+                undesirables to the area.&quot; This plan was since then
+                scrapped and replaced for a parking lot at Fern Rock
+                Transporation Center. Later in the 1960s, the plan was spoken of
+                again. Work had been done in anticipation of the new line and as
+                a result, a station was built under Adam&apos;s Ave and the
+                Boulevard.
               </p>
             </div>
             <div className="image-container">
@@ -209,11 +211,12 @@ const Proposals = () => {
                 King of Prussia Norristown HSL Extension
               </h1>
               <p>
-                King of Prussia's Business Improvement District(BID) has been
-                erected for over a decade now. This erection of the BID sparked
-                the revival of on of SEPTA's 50 year old proposals for a rail
-                extension. The cost had grown to $3.02 billion as of last year,
-                and due to funding issues, the proposal had been canceled.
+                King of Prussia&apos;s Business Improvement District(BID) has
+                been erected for over a decade now. This erection of the BID
+                sparked the revival of on of SEPTA&apos;s 50 year old proposals
+                for a rail extension. The cost had grown to $3.02 billion as of
+                last year, and due to funding issues, the proposal had been
+                canceled.
               </p>
             </div>
             <div className="image-container">
@@ -282,6 +285,7 @@ const Proposals = () => {
           </div>
         </section>
       </div>
+      <BackToTopButton />
     </Style>
   );
 };

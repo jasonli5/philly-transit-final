@@ -2,6 +2,7 @@ import React from "react";
 import Header from "@/components/Header";
 import Timeline from "@/modules/timeline/Timeline";
 import Meta from "@/components/Meta";
+import BackToTopButton from "@/components/BackToTopButton";
 
 const content = [
   {
@@ -65,6 +66,7 @@ export const MFLTimeline = () => {
         content={content}
         lineColor="#0044ff"
       />
+      <BackToTopButton />
     </React.Fragment>
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 import Header from "@/components/Header";
 import Timeline from "@/modules/timeline/Timeline";
 import Meta from "@/components/Meta";
+import BackToTopButton from "@/components/BackToTopButton";
 
 const content = [
   {
@@ -58,6 +59,7 @@ export const TrolleyTimeline = () => {
         content={content}
         lineColor="#007e1b"
       />
+      <BackToTopButton />
     </React.Fragment>
   );
 };

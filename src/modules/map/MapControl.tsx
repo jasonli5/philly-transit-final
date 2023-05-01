@@ -13,7 +13,7 @@ const MapControl = (props: React.PropsWithChildren<MapControlProps>) => {
         ref.current!
       );
     }
-  }, [map, ref]);
+  }, [map, ref, props.position]);
   return <div ref={ref}>{props.children}</div>;
 };
 
