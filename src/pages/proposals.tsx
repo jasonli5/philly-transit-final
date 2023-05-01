@@ -188,7 +188,11 @@ const Proposals = () => {
               </p>
             </div>
             <div className="image-container">
-              <img className="image" src="images/blvdmap.png" alt="" />
+              <img
+                className="image"
+                src="images/blvdmap.png"
+                alt="map of the blvd extension"
+              />
             </div>
           </div>
           <div className="more-images">
@@ -221,7 +225,11 @@ const Proposals = () => {
               </p>
             </div>
             <div className="image-container">
-              <img className="image" src="images/norrist.jpg" alt="" />
+              <img
+                className="image"
+                src="images/norrist.jpg"
+                alt="norristown extension model"
+              />
             </div>
           </div>
           <div className="more-images">
@@ -271,7 +279,7 @@ const Proposals = () => {
                 height={300}
                 className="image"
                 src="/images/trolley0.jpg"
-                alt=""
+                alt="trolley0"
               />
             </div>
           </div>
@@ -282,7 +290,11 @@ const Proposals = () => {
               src="/images/trolley1.png"
               alt="trolley1"
             />
-            <img className="image-3" src="images/trolley2.jpg" alt="norrist3" />
+            <img
+              className="image-3"
+              src="images/trolley2.png"
+              alt="new trolley diagram"
+            />
           </div>
         </section>
       </div>
