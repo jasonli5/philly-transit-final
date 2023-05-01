@@ -65,10 +65,10 @@ const Footer: React.FC<FooterProps> = ({ color = false }) => {
             <div className="text-container">
               <h4>About Philly Transit</h4>
               <p>
-                Philly Transit aims to make the history of Philadelphia's public
-                transportation available for residents and transit enthusiasts.
-                We love public transit and wanted to create a website that would
-                allow us to share our passion with others.
+                Philly Transit aims to make the history of Philadelphia&apos;s
+                public transportation available for residents and transit
+                enthusiasts. We love public transit and wanted to create a
+                website that would allow us to share our passion with others.
               </p>
             </div>
           </div>
