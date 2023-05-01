@@ -4,7 +4,7 @@
     "color": "#00A1DE",
     "description": "",
     "mode": "subway",
-    "dailyRidership": 120000,
+    "dailyRidership": 56155,
     "stops": [
       {
         "name": "Fern Rock Transportation Center",
@@ -123,7 +123,7 @@
     "color": "#FFD700",
     "description": "",
     "mode": "subway",
-    "dailyRidership": 170000,
+    "dailyRidership": 84115,
     "stops": [
       {
         "name": "69th Street Transportation Center",
@@ -272,7 +272,7 @@
     "color": "#FFD700",
     "description": "",
     "mode": "subway",
-    "dailyRidership": null,
+    "dailyRidership": 2301,
     "distance": null,
     "stations": null,
     "stops": [
@@ -487,7 +487,7 @@
     "color": "#FFD700",
     "description": "",
     "mode": "other",
-    "dailyRidership": null,
+    "dailyRidership": 4640,
     "stops": []
   },
   "PATCO": {
@@ -495,7 +495,7 @@
     "color": "#FFD700",
     "description": "",
     "mode": "other",
-    "dailyRidership": null,
+    "dailyRidership": 17000,
     "stops": []
   },
   "BSL-BLVD-EXT": {

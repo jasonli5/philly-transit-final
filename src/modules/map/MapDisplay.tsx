@@ -1,10 +1,5 @@
 import React, { useEffect } from "react";
-import {
-  GoogleMap,
-  Marker,
-  MarkerClusterer,
-  useLoadScript,
-} from "@react-google-maps/api";
+import { GoogleMap, Marker, MarkerClusterer } from "@react-google-maps/api";
 import Image from "next/image";
 import { TransitInfoJSON, TransitModeOptionsType } from "@/types";
 import TransitRoute from "@/modules/map/TransitRoute";
@@ -174,8 +169,8 @@ const transitModeOptions: TransitModeOptionsType = {
     "WTR",
   ],
   Trolley: ["10", "11", "13", "15", "34", "36", "101", "102"],
-  Bus: [],
   Other: ["NHSL", "PATCO"],
+  Bus: [],
   // Off: [],
 };
 
