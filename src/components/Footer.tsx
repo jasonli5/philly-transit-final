@@ -27,8 +27,8 @@ const Style = styled.div`
     font-weight: 600;
   }
 
-  .text-container p {
-    width: 50%;
+  .footer-description {
+    width: 50% !important;
     font-size: 0.9rem;
     font-weight: 300;
   }
@@ -65,7 +65,7 @@ const Style = styled.div`
       text-align: center;
     }
 
-    .text-container p {
+    .footer-description {
       margin: 0 auto;
     }
 
@@ -88,7 +88,7 @@ const Footer: React.FC<FooterProps> = ({ color = false }) => {
           <div className="left-col">
             <div className="text-container">
               <h4>About Philly Transit</h4>
-              <p>
+              <p className="footer-description">
                 Philly Transit aims to make the history of Philadelphia&apos;s
                 public transportation available for residents and transit
                 enthusiasts. We love public transit and wanted to create a
